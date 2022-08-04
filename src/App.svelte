@@ -1,18 +1,15 @@
 <script lang="ts">
-  import BottomNavbar from "./components/BottomNavbar.svelte";
   import { navIndex } from "./data/store";
-  let index;
-
-  navIndex.subscribe(value => {
-    index = navIndex;
-  })
+  import BottomNavbar from "./components/BottomNavbar.svelte";
+  import Emoji from "./pages/Emoji.svelte";
+  import Smile from "./pages/Smile.svelte";
 </script>
 
 <main>
-  {#if index == 0}
-    <p class="text-red-600">Makan</p>
-  {:else if index == 1}
-    <p class="text-green-600">Minum</p>
+  {#if $navIndex == 0}
+    <Emoji />
+  {:else if $navIndex == 1}
+    <Smile />
   {/if}
-  <BottomNavbar  />
+  <BottomNavbar />
 </main>

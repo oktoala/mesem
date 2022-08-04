@@ -3,8 +3,16 @@
   windows_subsystem = "windows"
 )]
 
+
+#[tauri::command]
+fn custom_command() -> String {
+  // emojis::iter().into();
+  "Hello from Rust!".into()
+}
+
 fn main() {
   tauri::Builder::default()
+    .invoke_handler(tauri::generate_handler![custom_command])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }
