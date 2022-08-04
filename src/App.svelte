@@ -5,7 +5,7 @@
   import Smile from "./pages/Smile.svelte";
 </script>
 
-<main>
+<main class="overflow-hidden">
   {#if $navIndex == 0}
     <Emoji />
   {:else if $navIndex == 1}

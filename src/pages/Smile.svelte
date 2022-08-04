@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   import { visible, clipboarded, smiles } from "../data/store";
-  import { invoke } from "@tauri-apps/api/tauri";
+  // import { invoke } from "@tauri-apps/api/tauri";
   import { writeText } from "@tauri-apps/api/clipboard";
   import Alert from "../components/Alert.svelte";
   import Tabbar from "../components/Tabbar.svelte";
@@ -17,7 +17,7 @@
   // $: invoke("custom_command").then((message) => alert(message));
 </script>
 
-<main class="mb-20 mt-5">
+<div class="mb-20 mt-20 overflow-y-hidden ">
   <Alert />
   <Tabbar />
   {#each smiles as smile}
@@ -40,4 +40,4 @@
       </div>
     </section>
   {/each}
-</main>
+</div>

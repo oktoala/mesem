@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Smile from "../assets/smile.svelte";
-  import Emoji from "../assets/emoji.svelte";
+  import SmileIcon from "../assets/smileIcon.svelte";
+  import EmojiIcon from "../assets/emojiIcon.svelte";
   import { navIndex } from "../data/store";
   let nav = [
-    { icon: Emoji, name: "Emoji" },
-    { icon: Smile, name: "Smile" },
+    { icon: EmojiIcon, name: "Emoji" },
+    { icon: SmileIcon, name: "Smile" },
   ];
 </script>
 
