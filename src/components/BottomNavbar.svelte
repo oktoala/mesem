@@ -12,15 +12,15 @@
   <div id="tabs" class="flex justify-between">
     {#each nav as { icon, name }, i}
       <button
-        on:click={() => navIndex.update((n) => (n = i))}
+        on:click={() => navIndex.update(n => (n = i))}
         class={`w-full ${
           $navIndex === i
-            ? "bg-gray-300 fill-red-500"
-            : "bg-white stroke-2 stroke-green-500"
+            ? "bg-primary-800 fill-primary-50"
+            : "bg-white stroke-2 stroke-green-500 fill-primary-800"
         }  justify-center inline-block text-center pt-2 pb-1`}
       >
         <svelte:component this={icon} />
-        <span class="tab tab-home block text-xs">{name}</span>
+        <span class="tab tab-home block text-primary-50 text-xs">{name}</span>
       </button>
     {/each}
   </div>

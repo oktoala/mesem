@@ -2,6 +2,10 @@ import { writable } from "svelte/store";
 
 export const navIndex = writable(0);
 
+export const visible = writable(false);
+
+export const clipboarded = writable('');
+
 export const smiles = [
   {
     name: "Tersenyum",

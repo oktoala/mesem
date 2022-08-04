@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,7 +6,11 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx,svelte}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': colors.sky,
+      }
+    },
   },
   plugins: [
     require('@shrutibalasa/tailwind-grid-auto-fit'),
