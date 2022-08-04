@@ -3,5 +3,21 @@
 @tailwind utilities;
 
 .active {
-  @apply bg-primary-600 text-primary-50 font-semibold
+  @apply  text-white font-semibold
+}
+
+.Tersenyum.active {
+  @apply bg-orange-400 
+}
+
+.Cinta.active {
+  @apply bg-pink-500 
+}
+
+.Memeluk.active {
+  @apply bg-lime-600
+}
+
+.Pamer.active {
+  @apply bg-amber-500
 }

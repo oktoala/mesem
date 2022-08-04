@@ -23,7 +23,7 @@
   {#each smiles as smile}
     <section
       id={smile.name}
-      class="section scrollspy mb-10 mt-10 mx-10 scroll-mt-10"
+      class="section scrollspy mb-10 mt-10 mx-10 scroll-mt-12"
     >
       <h2 class="text-2xl text-zinc-500 font-semibold mb-5">{smile.name}</h2>
       <div class="grid grid-auto-fit gap-5 my-2">
