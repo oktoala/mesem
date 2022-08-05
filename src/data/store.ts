@@ -9,7 +9,7 @@ export const clipboarded = writable("");
 export const smiles = [
   {
     name: "Tersenyum",
-    color: "bg-orange-500",
+    color: "orange-500",
     data: [
       "(•‿•)",
       "(・∀・)",
@@ -47,7 +47,7 @@ export const smiles = [
   },
   {
     name: "Cinta",
-    color: "bg-red-500",
+    color: "red-500",
     data: [
       "(●♡∀♡)",
       "(๑♡⌓♡๑)",
@@ -85,7 +85,7 @@ export const smiles = [
   },
   {
     name: "Memeluk",
-    color: "bg-lime-500",
+    color: "lime-500",
     data: [
       "⊂((・▽・))⊃",
       "(づ｡◕‿‿◕｡)づ",
@@ -123,7 +123,7 @@ export const smiles = [
   },
   {
     name: "Otot",
-    color: "bg-yellow-700",
+    color: "yellow-700",
     data: [
       "ᕙ(⇀‸↼‶)ᕗ",
       "ᕙ(＠°▽°＠)ᕗ",
@@ -161,7 +161,7 @@ export const smiles = [
   },
   {
     name: "Hewan",
-    color: "bg-green-500",
+    color: "green-500",
     data: [
       "V●ᴥ●V",
       "▼・ᴥ・▼",
@@ -199,7 +199,7 @@ export const smiles = [
   },
   {
     name: "Terkejut",
-    color: "bg-blue-500",
+    color: "blue-500",
     data: [
       "(･o･;) ",
       "(・o・)",
@@ -237,7 +237,7 @@ export const smiles = [
   },
   {
     name: "Menari",
-    color: "bg-fuchsia-500",
+    color: "fuchsia-500",
     data: [
       "♪～(´ε｀ )",
       "(＾3＾♪",
@@ -275,7 +275,7 @@ export const smiles = [
   },
   {
     name: "Bahu",
-    color: "bg-neutral-500",
+    color: "neutral-500",
     data: [
       "¯\\_(ツ)_/¯",
       "¯\\_༼ •́ ͜ʖ •̀ ༽_/¯",
@@ -313,7 +313,7 @@ export const smiles = [
   },
   {
     name: "Meja",
-    color: "bg-rose-500",
+    color: "rose-500",
     data: [
       "(╯°□°）╯︵ ┻━┻",
       "(ノ｀Д´)ノ彡┻━┻",
@@ -351,7 +351,7 @@ export const smiles = [
   },
   {
     name: "Beda",
-    color: "bg-purple-500",
+    color: "purple-500",
     data: [
       "ಠ_ಠ",
       "ಠ_ʖಠ",
@@ -389,7 +389,7 @@ export const smiles = [
   },
   {
     name: "Menangis",
-    color: "bg-cyan-500",
+    color: "cyan-500",
     data: [
       "•́  ‿ ,•̀",
       "ಥ‿ಥ",
@@ -427,7 +427,7 @@ export const smiles = [
   },
   {
     name: "Gugup",
-    color: "bg-amber-500",
+    color: "amber-500",
     data: [
       "(๑•﹏•)",
       "⊙﹏⊙",
@@ -465,7 +465,7 @@ export const smiles = [
   },
   {
     name: "Penunjuk",
-    color: 'bg-slate-800',
+    color: 'slate-800',
     data: [
       "┗(•ˇ_ˇ•)―→",
       "(☞ ಠ_ಠ)☞",

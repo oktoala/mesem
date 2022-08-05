@@ -8,7 +8,7 @@
       <a
         
         href={`#${smile.name}`}
-        class={`menu-item  ${smile.color} text-white w-full justify-center inline-block text-center rounded-lg p-2 mx-5 my-1`}
+        class={`menu-item  bg-${smile.color} text-white w-full justify-center inline-block text-center rounded-lg p-2 mx-5 my-1`}
       >
         {smile.name}
       </a>

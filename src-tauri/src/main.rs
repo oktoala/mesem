@@ -3,11 +3,8 @@
   windows_subsystem = "windows"
 )]
 
-
 #[tauri::command]
-fn custom_command() -> String {
-  // emojis::iter().into();
-  "Hello from Rust!".into()
+fn custom_command()  {
 }
 
 fn main() {
