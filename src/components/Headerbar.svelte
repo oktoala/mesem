@@ -1,10 +1,9 @@
-<script lang="ts">
+<script async lang="ts">
   import { appWindow } from "@tauri-apps/api/window";
   import maximizeIcon from "../assets/title-bar/maximize.svelte";
-  import closeIcon from '../assets/title-bar/close.svelte';
-  import minimizeIcon from '../assets/title-bar/minimize.svelte';
+  import closeIcon from "../assets/title-bar/close.svelte";
+  import minimizeIcon from "../assets/title-bar/minimize.svelte";
   import Navbar from "./Navbar.svelte";
-  let isMax = false;
 </script>
 
 <div
@@ -15,15 +14,21 @@
   <Navbar />
   <div class="decoration">
     <div
-      class="titlebar-button"
+      class="titlebar-button rounded-full hover:bg-slate-50"
       on:click={() => appWindow.minimize()}
       id="titlebar-minimize"
     >
       <svelte:component this={minimizeIcon} />
     </div>
     <div
-      class="titlebar-button"
-      on:click={() => appWindow.maximize()}
+      class="titlebar-button rounded-full hover:bg-slate-50"
+      on:click={async () => {
+        if (await appWindow.isMaximized()) {
+          appWindow.unmaximize();
+        } else {
+          appWindow.maximize();
+        }
+      }}
       id="titlebar-maximize"
     >
       <svelte:component this={maximizeIcon} />
@@ -33,7 +38,7 @@
       on:click={() => appWindow.close()}
       id="titlebar-close"
     >
-      <svelte:component class="fill-green-500" this={closeIcon} />
+      <svelte:component this={closeIcon}  />
     </div>
   </div>
 </div>

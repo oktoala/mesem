@@ -57,12 +57,13 @@
     "windows": [
       {
         "fullscreen": false,
-        "width": 1252,
-        "height": 742,
+        "width": 1042,
+        "height": 700,
         "resizable": true,
         "title": "Mesem",
         "visible": false,
-        "minWidth": 720,
+        "minWidth": 1042,
+        "minHeight":693, 
         "decorations": false
       },
       {
