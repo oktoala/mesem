@@ -3,8 +3,9 @@
   import BottomNavbar from "./components/BottomNavbar.svelte";
   import Emoji from "./pages/Emoji.svelte";
   import Smile from "./pages/Smile.svelte";
-  import {invoke } from '@tauri-apps/api/tauri';
+  import { invoke } from "@tauri-apps/api/tauri";
   import { onMount } from "svelte";
+  import Headerbar from "./components/Headerbar.svelte";
   // // Variable for category
   // const categories = {
   //   smiley: "smileys-emotion",
@@ -39,25 +40,26 @@
   // }
 
   onMount(async () => {
-  //   emojis.smiley = await fetchEmoji(categories.smiley);
-  //   emojis.people = await fetchEmoji(categories.people);
-  //   emojis.animals = await fetchEmoji(categories.animals);
-  //   emojis.food = await fetchEmoji(categories.food);
-  //   emojis.activities = await fetchEmoji(categories.activities);
-  //   emojis.travel = await fetchEmoji(categories.travel);
-  //   emojis.objects = await fetchEmoji(categories.objects);
-  //   emojis.symbols = await fetchEmoji(categories.symbols);
-  //   emojis.flags = await fetchEmoji(categories.flags);
-    invoke('close_splashscreen');
+    //   emojis.smiley = await fetchEmoji(categories.smiley);
+    //   emojis.people = await fetchEmoji(categories.people);
+    //   emojis.animals = await fetchEmoji(categories.animals);
+    //   emojis.food = await fetchEmoji(categories.food);
+    //   emojis.activities = await fetchEmoji(categories.activities);
+    //   emojis.travel = await fetchEmoji(categories.travel);
+    //   emojis.objects = await fetchEmoji(categories.objects);
+    //   emojis.symbols = await fetchEmoji(categories.symbols);
+    //   emojis.flags = await fetchEmoji(categories.flags);
+    invoke("close_splashscreen");
   });
 </script>
 
 <main class="overflow-hidden">
+  <Headerbar />
   {#if $navIndex == 0}
-  <p>Makan</p>
+    <p>Makan</p>
     <!-- <Emoji {...emojis} /> -->
   {:else if $navIndex == 1}
-    <Smile smiles={smiles} />
+    <Smile {smiles} />
   {/if}
   <BottomNavbar />
 </main>

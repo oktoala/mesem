@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 #main-menu :not(.active) {
-  @apply  text-gray-400 font-semibold bg-white
+  @apply  text-gray-400 font-semibold bg-white hover:bg-slate-100
 }
 

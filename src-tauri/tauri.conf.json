@@ -62,7 +62,8 @@
         "resizable": true,
         "title": "Mesem",
         "visible": false,
-        "minWidth": 1252
+        "minWidth": 1252,
+        "decorations": false
       },
       {
         "width": 800,

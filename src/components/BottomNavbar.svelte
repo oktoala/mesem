@@ -8,7 +8,7 @@
   ];
 </script>
 
-<section class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
+<section class="flex flex-col inset-x-0 bottom-0 z-10 bg-white shadow">
   <div id="tabs" class="flex justify-between">
     {#each nav as { icon, name }, i}
       <button
@@ -20,7 +20,7 @@
         }  justify-center inline-block text-center pt-2 pb-1`}
       >
         <svelte:component this={icon} />
-        <span class="tab tab-home block text-primary-50 text-xs">{name}</span>
+        <span class="tab tab-home  text-primary-50 text-xs">{name}</span>
       </button>
     {/each}
   </div>
