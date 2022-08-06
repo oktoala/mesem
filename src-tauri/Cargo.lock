@@ -57,7 +57,6 @@ checksum = "c794e162a5eff65c72ef524dfe393eb923c354e350bb78b9c7383df13f3bc142"
 name = "app"
 version = "0.1.0"
 dependencies = [
- "emojis",
  "serde",
  "serde_json",
  "tauri",
@@ -607,15 +606,6 @@ name = "embed_plist"
 version = "1.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4ef6b89e5b37196644d8796de5268852ff179b44e96276cf4290264843743bb7"
-
-[[package]]
-name = "emojis"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cbf85aeacc72b7b5d9e78b39399562a2846566936e41a6f59f9d96b3fa7c4f96"
-dependencies = [
- "strsim",
-]
 
 [[package]]
 name = "fastrand"

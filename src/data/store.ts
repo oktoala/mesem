@@ -1,9 +1,9 @@
 import { writable } from "svelte/store";
 
-import smiley from "./emoji-data/smiley";
-import people from "./emoji-data/people";
+import smiley from "./emoji-data/smiley.json";
+import people from "./emoji-data/people.json";
 
-import { bahu, beda, cinta, gugup, hewan, meja, memeluk, menangis, menari, otot, penunjuk, terkejut, tersenyum } from "./smilesData";
+import { bahu, beda, cinta, gugup, hewan, meja, memeluk, menangis, menari, otot, penunjuk, terkejut, tersenyum } from "./smilesData.json";
 
 export const navIndex = writable(0);
 
