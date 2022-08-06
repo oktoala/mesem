@@ -1,28 +1,34 @@
 import { writable } from "svelte/store";
 
+// Data Json
 import smiley from "./emoji-data/smiley.json";
 import people from "./emoji-data/people.json";
-
 import { bahu, beda, cinta, gugup, hewan, meja, memeluk, menangis, menari, otot, penunjuk, terkejut, tersenyum } from "./smilesData.json";
+
+
+// SVG
+import smileyGroup from '../assets/title-bar/maximize.svelte';
 
 export const navIndex = writable(0);
 
 export const visible = writable(false);
 
+// Tab State
 export const tabSmile = writable(0);
+export const tabEmoji = writable(0);
 
 export const clipboarded = writable("");
 
 export const emojis = [
   {
-    title: '',
+    title: smileyGroup,
     label: 'Smiley & Emoticon',
     name: 'smiley',
     color: 'fill-orange-500',
     data: smiley,
   },
   {
-    title: '',
+    title: smileyGroup,
     label: 'People & Body',
     name: 'smiley',
     color: 'fill-purple-500',

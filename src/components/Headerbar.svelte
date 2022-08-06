@@ -1,45 +1,49 @@
 <script lang="ts">
-  import { appWindow } from '@tauri-apps/api/window'
-  import  maximizeIcon from '../assets/maximize.svg';
+  import { appWindow } from "@tauri-apps/api/window";
+  import maximizeIcon from "../assets/title-bar/maximize.svelte";
+  import closeIcon from '../assets/title-bar/close.svelte';
+  import minimizeIcon from '../assets/title-bar/minimize.svelte';
+  import Navbar from "./Navbar.svelte";
+  let isMax = false;
 </script>
-<div data-tauri-drag-region class="titlebar">
-  <div class="titlebar-button" on:click={() => appWindow.minimize()} id="titlebar-minimize">
-    <img
-      src="https://api.iconify.design/mdi:window-minimize.svg"
-      alt="minimize"
-    />
-  </div>
-  <div class="titlebar-button" on:click={() => appWindow.maximize()} id="titlebar-maximize">
-    <img
-      src={maximizeIcon}
-      alt="maximize"
-    />
-  </div>
-  <div class="titlebar-button" on:click={() => appWindow.close()} id="titlebar-close">
-    <img src="https://api.iconify.design/mdi:close.svg" alt="close" />
+
+<div
+  data-tauri-drag-region
+  class="h-12 bg-gray-200 flex select-none justify-between items-center px-2 fixed top-0 left-0 right-0  "
+>
+  <div />
+  <Navbar />
+  <div class="decoration">
+    <div
+      class="titlebar-button"
+      on:click={() => appWindow.minimize()}
+      id="titlebar-minimize"
+    >
+      <svelte:component this={minimizeIcon} />
+    </div>
+    <div
+      class="titlebar-button"
+      on:click={() => appWindow.maximize()}
+      id="titlebar-maximize"
+    >
+      <svelte:component this={maximizeIcon} />
+    </div>
+    <div
+      class="titlebar-button rounded-full hover:bg-red-500 group"
+      on:click={() => appWindow.close()}
+      id="titlebar-close"
+    >
+      <svelte:component class="fill-green-500" this={closeIcon} />
+    </div>
   </div>
 </div>
 
 <style>
-  .titlebar {
-    height: 50px;
-    background: #329ea3;
-    user-select: none;
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
   .titlebar-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
-  }
-  .titlebar-button:hover {
-    background: #5bbec3;
   }
 </style>
