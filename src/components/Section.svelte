@@ -8,9 +8,9 @@
   const changeSlug = (slugEmoji) => (slug = slugEmoji);
 </script>
 
+<Lazy height={300} offset={150}>
 <section class="section mb-10 mx-10 scroll-mt-20">
-  <h2 class={`text-2xl font-semibold mb-5`}>{category}</h2>
-  <Lazy height={300} offset={0}>
+    <h2 class={`text-2xl font-semibold mb-5`}>{category}</h2>
     <div class="grid grid-auto-fit-[4rem] gap-5 my-2">
       {#each emojis as emoji}
         {#if !emoji.slug.includes("skin-tone")}
@@ -27,6 +27,6 @@
         {/if}
       {/each}
       <div />
-    </div></Lazy
-  >
-</section>
+    </div>
+  </section>
+</Lazy>

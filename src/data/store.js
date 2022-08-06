@@ -8,8 +8,10 @@ export const clipboarded = writable("");
 
 export const smiles = [
   {
-    name: "Tersenyum",
-    color: "orange-500",
+    title: '(◠‿◕)',
+    label: 'Tersenyum',
+    name: "tersenyum",
+    color: "bg-orange-500",
     data: [
       "(•‿•)",
       "(・∀・)",
@@ -46,8 +48,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Cinta",
-    color: "red-500",
+    title: '(•ө•)♡',
+    label: 'Cinta',
+    name: "cinta",
+    color: "bg-red-500",
     data: [
       "(●♡∀♡)",
       "(๑♡⌓♡๑)",
@@ -84,8 +88,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Memeluk",
-    color: "lime-500",
+    title: '(^o^)',
+    label: 'Memeluk',
+    name: "memeluk",
+    color: "bg-lime-500",
     data: [
       "⊂((・▽・))⊃",
       "(づ｡◕‿‿◕｡)づ",
@@ -122,8 +128,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Otot",
-    color: "yellow-700",
+    title: 'ᕙ~.~ᕗ',
+    label: 'Memamerkan Otot',
+    name: "otot",
+    color: "bg-yellow-700",
     data: [
       "ᕙ(⇀‸↼‶)ᕗ",
       "ᕙ(＠°▽°＠)ᕗ",
@@ -160,8 +168,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Hewan",
-    color: "green-500",
+    title: '(◕ᴥ◕)',
+    label: 'Hewan',
+    name: "hewan",
+    color: "bg-green-500",
     data: [
       "V●ᴥ●V",
       "▼・ᴥ・▼",
@@ -198,8 +208,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Terkejut",
-    color: "blue-500",
+    title: '(>0<)',
+    label: 'Terkejut',
+    name: "terkejut",
+    color: "bg-blue-500",
     data: [
       "(･o･;) ",
       "(・o・)",
@@ -236,8 +248,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Menari",
-    color: "fuchsia-500",
+    title: '♪\\^ω^\\',
+    label: 'Menari',
+    name: "menari",
+    color: "bg-fuchsia-500",
     data: [
       "♪～(´ε｀ )",
       "(＾3＾♪",
@@ -274,8 +288,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Bahu",
-    color: "neutral-500",
+    title: '乁•_•ㄏ',
+    label: 'Mengangkat Bahu',
+    name: "bahu",
+    color: "bg-neutral-500",
     data: [
       "¯\\_(ツ)_/¯",
       "¯\\_༼ •́ ͜ʖ •̀ ༽_/¯",
@@ -312,8 +328,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Meja",
-    color: "rose-500",
+    title: '┻━┻',
+    label: 'Membalikkan Meja',
+    name: "meja",
+    color: "bg-rose-500",
     data: [
       "(╯°□°）╯︵ ┻━┻",
       "(ノ｀Д´)ノ彡┻━┻",
@@ -350,8 +368,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Beda",
-    color: "purple-500",
+    title: 'ಠ_ಠ',
+    label: 'Tidak Setuju',
+    name: "beda",
+    color: "bg-purple-500",
     data: [
       "ಠ_ಠ",
       "ಠ_ʖಠ",
@@ -388,8 +408,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Menangis",
-    color: "cyan-500",
+    title: 'ಥ‿ಥ',
+    label: 'Menangis',
+    name: "menangis",
+    color: "bg-cyan-500",
     data: [
       "•́  ‿ ,•̀",
       "ಥ‿ಥ",
@@ -426,8 +448,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Gugup",
-    color: "amber-500",
+    title: '~_~',
+    label: 'Gugup',
+    name: "gugup",
+    color: "bg-amber-500",
     data: [
       "(๑•﹏•)",
       "⊙﹏⊙",
@@ -464,8 +488,10 @@ export const smiles = [
     ],
   },
   {
-    name: "Penunjuk",
-    color: 'slate-800',
+    title: '→_→',
+    label: 'Penunjuk Arah',
+    name: "penunjuk",
+    color: 'bg-slate-800',
     data: [
       "┗(•ˇ_ˇ•)―→",
       "(☞ ಠ_ಠ)☞",

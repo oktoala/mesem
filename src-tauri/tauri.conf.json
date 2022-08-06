@@ -57,10 +57,19 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "width": 1252,
+        "height": 742,
         "resizable": true,
         "title": "Mesem",
-        "width": 800
+        "visible": false,
+        "minWidth": 1252
+      },
+      {
+        "width": 800,
+        "height": 600,
+        "decorations": false,
+        "url": "splashscreen.html",
+        "label": "splashscreen"
       }
     ]
   }

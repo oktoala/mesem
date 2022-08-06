@@ -1,11 +1,13 @@
-<script>
-  import { visible, clipboarded, smiles } from "../data/store";
+<script lang="ts">
+  import { visible, clipboarded } from "../data/store";
   import { writeText } from "@tauri-apps/api/clipboard";
   import Alert from "../components/Alert.svelte";
   import Tabbar from "../components/Tabbar.svelte";
   import Lazy from "svelte-lazy";
   import scrollSpy from "simple-scrollspy";
   import { onMount } from "svelte";
+
+  export let smiles;
 
   onMount(() => {
     scrollSpy("#main-menu", {
@@ -17,7 +19,7 @@
   });
 </script>
 
-<div class="mb-20 mt-20 overflow-y-hidden ">
+<div class="mb-20 mt-10 overflow-y-hidden ">
   <Alert />
   <Tabbar />
   {#each smiles as smile}
@@ -27,7 +29,7 @@
     >
       <Lazy height={300} offset={0} class="">
         <h2 class={`text-2xl text-${smile.color}  font-semibold mb-5`}>
-          {smile.name}
+          {smile.label}
         </h2>
         <div class="grid grid-auto-fit gap-5 my-2">
           {#each smile.data as data}

@@ -4,13 +4,13 @@
 
 <section class="block fixed overflow-x-auto inset-x-0 top-0 z-10 bg-white shadow-md">
   <div id="main-menu" class="flex justify-between">
-    {#each smiles as smile,i}
+    {#each smiles as smile}
       <a
-        
         href={`#${smile.name}`}
-        class={`menu-item  bg-${smile.color} text-white w-full justify-center inline-block text-center rounded-lg p-2 mx-5 my-1`}
+        title={smile.label}
+        class={`menu-item  ${smile.color} whitespace-nowrap w-full text-white  justify-center inline-block text-center rounded-lg p-2 mx-5 my-1`}
       >
-        {smile.name}
+        {smile.title}
       </a>
     {/each}
   </div>
