@@ -1,27 +1,35 @@
 <script lang="ts">
-  import { smiles, tabSmile } from "../data/store";
-  let datas = smiles;
+  import { navIndex, emojis, tabEmoji, smiles, tabSmile } from "../data/store";
 </script>
 
 <section
   class="w-20 top-12 overflow-y-visible h-screen p-2 z-10 bg-white shadow-lg fixed"
 >
   <div class="flex-col flex items-center relative">
-    {#each datas as data, i}
-      <button
-        on:click={() => tabSmile.update((n) => (n = i))}
-        class={`menu-item  ${
-          $tabSmile === i
-            ? `${data.color} text-white`
-            : "text-slate-400 hover:bg-slate-100"
-        } whitespace-nowrap w-full justify-center inline-block text-center rounded-lg p-2 my-1 group`}
-      >
-        {data.title}
-        <span
-          class="absolute w-auto left-20 p-2 min-w-max z-20 rounded-md shadow-md text-white bg-gray-900 text-xs group-hover:scale-100 scale-0 font-bold transition-all duration-100 origin-left"
-          >{data.label}</span
+    {#if $navIndex === 0}
+      {#each emojis as emoji, i}
+        <button
+          on:click={() => tabEmoji.update((n) => (n = i))}
+          class={`sidebar-button  ${
+            $tabEmoji === i ? `${emoji.color} active` : "inactive"
+          }  group`}
         >
-      </button>
-    {/each}
+          {emoji.title}
+          <span class="tooltip group-hover:scale-100">{emoji.label}</span>
+        </button>
+      {/each}
+    {:else if $navIndex === 1}
+      {#each smiles as smile, i}
+        <button
+          on:click={() => tabSmile.update((n) => (n = i))}
+          class={`sidebar-button  ${
+            $tabSmile === i ? `${smile.color} active` : "inactive"
+          }  group`}
+        >
+          {smile.title}
+          <span class="tooltip group-hover:scale-100">{smile.label}</span>
+        </button>
+      {/each}
+    {/if}
   </div>
 </section>

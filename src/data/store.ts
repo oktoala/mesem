@@ -3,6 +3,7 @@ import { writable } from "svelte/store";
 // Data Json
 import smiley from "./emoji-data/smiley.json";
 import people from "./emoji-data/people.json";
+import animal from "./emoji-data/animals.json";
 import { bahu, beda, cinta, gugup, hewan, meja, memeluk, menangis, menari, otot, penunjuk, terkejut, tersenyum } from "./smilesData.json";
 
 
@@ -17,21 +18,23 @@ export const visible = writable(false);
 export const tabSmile = writable(0);
 export const tabEmoji = writable(0);
 
-export const clipboarded = writable("");
+// Cliboard
+export const alert = writable("");
+
 
 export const emojis = [
   {
-    title: smileyGroup,
+    title: '🙃',
     label: 'Smiley & Emoticon',
     name: 'smiley',
-    color: 'fill-orange-500',
+    color: 'bg-blue-500',
     data: smiley,
   },
   {
-    title: smileyGroup,
+    title: '💪🏻',
     label: 'People & Body',
-    name: 'smiley',
-    color: 'fill-purple-500',
+    name: 'people',
+    color: 'bg-purple-500',
     data: people,
   },
 ]

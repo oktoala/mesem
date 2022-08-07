@@ -610,11 +610,6 @@ is-number@^7.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
-jump.js@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.2.tgz#e0641b47f40a38f2139c25fda0500bf28e43015a"
-  integrity sha512-oUkJJ/Y4ATU5qjkXBntCZSKctbSyS3ewe2jrLaUu/cc9jsQiAn0fnTUxQnZz3mJdDdem1Q279zrD6h3n+Cgxtg==
-
 kleur@^4.1.5:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
@@ -884,13 +879,6 @@ sander@^0.5.0:
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-simple-scrollspy@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/simple-scrollspy/-/simple-scrollspy-2.2.0.tgz#e608cf57c8d5be189582945cd81d0be6431e2225"
-  integrity sha512-kvA+SIJPP9bcYK65EpLIUnYolaBllraZ/9DXi/3/Tn8bSs9XA/Kda5+NT5KxA/VHJLIw6MJmFBC0AKapo6qjXA==
-  optionalDependencies:
-    jump.js "^1.0.2"
-
 sorcery@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/sorcery/-/sorcery-0.10.0.tgz#8ae90ad7d7cb05fc59f1ab0c637845d5c15a52b7"
@@ -941,11 +929,6 @@ svelte-hmr@^0.14.12:
   version "0.14.12"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.12.tgz#a127aec02f1896500b10148b2d4d21ddde39973f"
   integrity sha512-4QSW/VvXuqVcFZ+RhxiR8/newmwOCTlbYIezvkeN6302YFRE8cXy0naamHcjz8Y9Ce3ITTZtrHrIL0AGfyo61w==
-
-svelte-icon@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/svelte-icon/-/svelte-icon-1.2.4.tgz#f2655daf422cd506769c09377361a354ec6ed7e4"
-  integrity sha512-fDdTKQAaWUFRRR1f4l65ynXdoAcsR8ikL8G9hOh7gGrjlx/44Ka6flEJHR5mCKoAN/A11n8pd96QcKZpxvmbIQ==
 
 svelte-lazy@^1.1.0:
   version "1.1.0"

@@ -1,25 +1,39 @@
-<script lang="ts">
-  import { visible, clipboarded } from "../data/store";
+<!-- components/Alert.svelte -->
+<script>
+  import { onDestroy } from "svelte";
+  import { alert } from "../data/store";
   import { fly } from "svelte/transition";
-  let status = "waiting...";
+
+  export let ms = 3000;
+  let visible;
+  let timeout;
+
+  const onMessageChange = (message, ms) => {
+    clearTimeout(timeout);
+    if (!message) {
+      // hide Alert if message is empty
+      visible = false;
+    } else {
+      visible = true; // show alert
+      if (ms > 0) timeout = setTimeout(() => (visible = false), ms); // and hide it after ms milliseconds
+    }
+  };
+  $: onMessageChange($alert, ms); // whenever the alert store or the ms props changes run onMessageChange
+
+  onDestroy(() => clearTimeout(timeout)); // make sure we clean-up the timeout
 </script>
 
-{#if $visible}
+{#if visible}
   <div
-    transition:fly={{ y: -100, duration: 500 }}
-    on:introstart={() => (status = "intro started")}
-    on:outrostart={() => (status = "outro started")}
-    on:introend={() => visible.update((e) => (e = false))}
-    on:outroend={() => (status = "outro ended")}
-    class="p-2 bg-primary-800 rounded-full items-center fixed top-15 z-20 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-50 leading-none lg:rounded-full flex lg:inline-flex"
+    class="p-2 bg-primary-800 rounded-full items-center fixed top-20 z-20 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-50 leading-none lg:rounded-full flex lg:inline-flex"
+    role="alert"
+    on:click={() => (visible = false)}
+    transition:fly={{ delay: 250, duration: 300, x: 0, y: -100, opacity: 0.5 }}
   >
     <span
       class="flex rounded-full bg-primary-500 uppercase px-2 py-1 text-xs font-bold mr-3"
+      >{$alert}</span
     >
-      {$clipboarded}
-    </span>
-    <span class="font-semibold mr-2 text-left flex-auto">
-      Tercopy ke Clipboard
-    </span>
+    <span class="font-semibold mr-2 text-left flex-auto">Udah Dicopy</span>
   </div>
 {/if}
