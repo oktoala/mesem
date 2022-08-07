@@ -18,7 +18,6 @@
   <Headerbar />
   <Sidebar />
   {#if $navIndex == 0}
-    <p>Makan</p>
     <Emoji />
   {:else if $navIndex == 1}
     <Smile />

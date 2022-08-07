@@ -1,7 +1,6 @@
 <script lang="ts">
   import { tabEmoji, emojis, alert } from "../data/store";
   import { writeText } from "@tauri-apps/api/clipboard";
-  import Lazy from "svelte-lazy";
 </script>
 
 <div class="flex mt-12 bg-zinc-50">
