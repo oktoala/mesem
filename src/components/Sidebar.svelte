@@ -1,29 +1,42 @@
 <script lang="ts">
-  import { navIndex, emojis, tabEmoji, smiles, tabSmile } from "../data/store";
+  import {
+    nav,
+    emojis,
+    smiles,
+    title,
+  } from "../data/store";
 </script>
 
 <section
-  class="w-20 top-12 overflow-y-visible h-screen p-2 z-10 bg-white shadow-lg fixed"
+  class="w-20 top-12 overflow-y-visible  h-screen p-2 z-10 bg-white shadow-lg fixed"
 >
   <div class="flex-col flex items-center relative">
-    {#if $navIndex === 0}
+    {#if $nav.index === 0}
       {#each emojis as emoji, i}
         <button
-          on:click={() => tabEmoji.update((n) => (n = i))}
+          on:click={() => {
+            $nav.tab[0].indexSidebar = i;
+            $nav.tab[0].label = emoji.label;
+            $title = emoji.label;
+          }}
           class={`sidebar-button  ${
-            $tabEmoji === i ? `${emoji.color} active` : "inactive"
+            $nav.tab[0].indexSidebar === i ? `${emoji.color} active` : "inactive"
           }  group`}
         >
           {emoji.title}
           <span class="tooltip group-hover:scale-100">{emoji.label}</span>
         </button>
       {/each}
-    {:else if $navIndex === 1}
+    {:else if $nav.index === 1}
       {#each smiles as smile, i}
         <button
-          on:click={() => tabSmile.update((n) => (n = i))}
+          on:click={() => {
+            $nav.tab[1].indexSidebar = i;
+            $nav.tab[1].label = smile.label;
+            $title = smile.label;
+          }}
           class={`sidebar-button  ${
-            $tabSmile === i ? `${smile.color} active` : "inactive"
+            $nav.tab[1].indexSidebar=== i ? `${smile.color} active` : "inactive"
           }  group`}
         >
           {smile.title}

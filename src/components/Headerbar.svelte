@@ -1,4 +1,5 @@
-<script async lang="ts">
+<script lang="ts">
+  import { title } from "../data/store";
   import { appWindow } from "@tauri-apps/api/window";
   import maximizeIcon from "../assets/title-bar/maximize.svelte";
   import closeIcon from "../assets/title-bar/close.svelte";
@@ -10,7 +11,7 @@
   data-tauri-drag-region
   class="h-12 bg-gray-200 flex select-none justify-between items-center px-2 fixed top-0 left-0 right-0  "
 >
-  <div />
+  <h1 class="text-lg font-bold w-44">{$title}</h1>
   <Navbar />
   <div class="decoration">
     <div
@@ -38,7 +39,7 @@
       on:click={() => appWindow.close()}
       id="titlebar-close"
     >
-      <svelte:component this={closeIcon}  />
+      <svelte:component this={closeIcon} />
     </div>
   </div>
 </div>

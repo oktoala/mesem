@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { tabSmile, smiles, alert } from "../data/store";
+  import { nav, smiles, alert } from "../data/store";
   import { writeText } from "@tauri-apps/api/clipboard";
 </script>
 
 <div class="flex mt-12 bg-zinc-50 ">
   <div class="ml-20 p-5 w-full">
     {#each smiles as smile, i}
-      {#if $tabSmile === i}
-        <h2 class={`text-2xl text-${smile.color}  font-semibold mb-5`}>
+      {#if $nav.tab[1].indexSidebar === i}
+        <!-- <h2 class={`text-2xl text-${smile.color}  font-semibold mb-5`}>
           {smile.label}
-        </h2>
+        </h2> -->
         <div class="grid grid-auto-fit gap-5 my-2">
           {#each smile.data as data}
             <button

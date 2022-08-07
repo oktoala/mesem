@@ -1,5 +1,7 @@
 import { writable } from "svelte/store";
 
+
+
 // Data Json
 import smiley from "./emoji-data/smiley.json";
 import people from "./emoji-data/people.json";
@@ -26,23 +28,29 @@ import {
   tersenyum,
 } from "./smilesData.json";
 
-// SVG
-import smileyGroup from "../assets/title-bar/maximize.svelte";
-
-export const navIndex = writable(0);
-
-export const visible = writable(false);
+export const title = writable("Mesem");
 
 // Tab State
-export const tabSmile = writable(0);
-export const tabEmoji = writable(0);
+export const nav = writable({
+  index: 0,
+  tab: [
+    {
+      indexSidebar: 0,
+      label: "Smiley & Emoticon",
+    },
+    {
+      indexSidebar: 0,
+      label: "Tersenyum",
+    },
+  ],
+});
 
 // Cliboard
 export const alert = writable("");
 
 export const emojis = [
   {
-    title: "👺",
+    title: "💖",
     label: "Smiley & Emoticon",
     name: "smiley",
     color: "bg-blue-500",
@@ -84,26 +92,26 @@ export const emojis = [
     data: travel,
   },
   {
-    title: '🖱️',
-    label: 'Objects',
-    name: 'objects',
-    color: 'bg-yellow-700',
-    data: objects
+    title: "🖱️",
+    label: "Objects",
+    name: "objects",
+    color: "bg-yellow-700",
+    data: objects,
   },
   {
-    title: '❤️',
-    label: 'Symbols',
-    name: 'symbols',
-    color: 'bg-fuchsia-500',
+    title: "️♻️",
+    label: "Symbols",
+    name: "symbols",
+    color: "bg-fuchsia-500",
     data: symbols,
   },
   {
-    title: '🇮🇩',
-    label: 'Flags',
-    name: 'flags',
-    color: 'bg-sky-500',
+    title: "🇮🇩",
+    label: "Flags",
+    name: "flags",
+    color: "bg-sky-500",
     data: flags,
-  }
+  },
 ];
 
 export const smiles = [

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { navIndex } from "./data/store";
+  import { nav } from "./data/store";
   import Emoji from "./pages/Emoji.svelte";
   import Smile from "./pages/Smile.svelte";
   import { invoke } from "@tauri-apps/api/tauri";
@@ -13,13 +13,13 @@
   });
 </script>
 
-<main class="overflow-hidden">
+<main class="overflow-hidden select-none ">
   <Alert />
   <Headerbar />
   <Sidebar />
-  {#if $navIndex == 0}
+  {#if $nav.index == 0}
     <Emoji />
-  {:else if $navIndex == 1}
+  {:else if $nav.index == 1}
     <Smile />
   {/if}
 </main>
