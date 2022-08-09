@@ -14,7 +14,7 @@
   ];
 </script>
 
-<div id="tabs" class="flex w-1/4 justify-between items-center">
+<div id="tabs" class="flex w-1/3 justify-between items-center">
   {#each navBar as { icon, name }, i}
     <button
       on:click={() => {
@@ -29,7 +29,7 @@
     >
       <svelte:component this={icon} />
       {#if $nav.index === i}
-        <span class="ml-2  text-slate-100 text-sm font-semibold">{name}</span>
+        <span class="ml-2 hidden sm:inline  text-slate-100 text-sm font-semibold">{name}</span>
       {/if}
     </button>
   {/each}

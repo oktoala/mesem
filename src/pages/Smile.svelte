@@ -13,7 +13,7 @@
         <div class="grid grid-auto-fit gap-5 my-2">
           {#each smile.data as data}
             <button
-              on:click={async () => {
+              on:dblclick={async () => {
                 await writeText(data);
                 $alert = data;
               }}

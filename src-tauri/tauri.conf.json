@@ -30,7 +30,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.mesem",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -62,9 +62,9 @@
         "resizable": true,
         "title": "Mesem",
         "visible": false,
-        "minWidth": 1042,
-        "minHeight":693, 
-        "decorations": false
+        "decorations": false,
+        "minHeight": 491
+        
       },
       {
         "width": 800,
