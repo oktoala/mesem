@@ -54,6 +54,10 @@
     "updater": {
       "active": false
     },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    },
     "windows": [
       {
         "fullscreen": false,
@@ -64,7 +68,6 @@
         "visible": false,
         "decorations": false,
         "minHeight": 491
-        
       },
       {
         "width": 800,

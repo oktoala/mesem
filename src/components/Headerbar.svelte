@@ -36,7 +36,7 @@
     </div>
     <div
       class="titlebar-button rounded-full hover:bg-red-500 group"
-      on:click={() => appWindow.close()}
+      on:click={() => appWindow.hide()}
       id="titlebar-close"
     >
       <svelte:component this={closeIcon} />
